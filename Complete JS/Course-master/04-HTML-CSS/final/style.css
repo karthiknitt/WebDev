@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: firebrick;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20;
+}
+
+h1 {
+  color: white;
+  /* select by tag */
+}
+
+.first {
+  /* select by class */
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  text-align: justify;
+  color: greenyellow;
+}
+
+#title-one {
+  /* select by id */
+  text-align: center;
+  margin: 20px;
+  border: 30px;
+  border-color: blue;
+  padding: 5px;
+}

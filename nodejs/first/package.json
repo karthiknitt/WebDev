@@ -1,0 +1,21 @@
+{
+  "name": "first",
+  "version": "0.0.1",
+  "description": "my first node app",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "module",
+    "url": "yes"
+  },
+  "keywords": [
+    "first",
+    "ever",
+    "app"
+  ],
+  "author": "Karthikeyan Natarajan",
+  "license": "ISC"
+}
