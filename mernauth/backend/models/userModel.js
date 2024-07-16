@@ -1,6 +1,7 @@
 import mongoose from 'mongoose'; //Mongoose is ORM for MongoDB
 const Schema = mongoose.Schema; //Define schema as a Mongoose Schema
 import bcrypt from 'bcrypt'; //Tool for encrypting passwords
+import validator from 'validator'; //package for regEx validation
 
 //Define the actual schema for the user. Email is unique. Both email and passwords are required fields.
 
@@ -22,7 +23,24 @@ const userSchema = new Schema(
 //MongoDB/Mongoose lets us create our own methods in the model, here we create one called signup
 
 userSchema.statics.signup = async function (email, password) {
+  //Perform empty fields check
+  if (!email || !password) {
+    throw Error('Please fill in all fields.');
+  }
+
+  //Perform check for a valid email ID
+
+  if (!validator.isEmail(email)) {
+    throw Error('Email ID is not valid.');
+  }
+
+  //Perform check for a strong password
+
+  if (!validator.isStrongPassword(password)) {
+    throw Error('Password not strong enough 😂');
+  }
   //check if email already exists
+
   //User collection is exported only at the last line of this file and hence it is not available. So we use the this keyword
   //Also note that we are using the regular function type declaration using function keyword for this operator to work. If we used an arrow fucntion this won't work
 
