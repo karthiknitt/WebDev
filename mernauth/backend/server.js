@@ -32,4 +32,4 @@ mongoose
 
 app.use('/api/workouts', workoutRoutes);
 
-app.use('/api/user', userRoutes); //Register the route here using the userRoutes object,points to / in frontend
+app.use('/api/user', userRoutes); //Register the route here using the userRoutes object,points to /user in frontend
