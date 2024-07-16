@@ -2,6 +2,7 @@ import express from 'express';
 import dotenv from 'dotenv';
 import workoutRoutes from './routes/workouts.js';
 import mongoose from 'mongoose';
+import userRoutes from './routes/users.js'; //import the router object from users.js as a router object here
 
 dotenv.config();
 const app = express();
@@ -31,6 +32,4 @@ mongoose
 
 app.use('/api/workouts', workoutRoutes);
 
-// app.get('/', (req, res) => {
-//   res.json({ msg: 'Welcome to the app' });
-// });
+app.use('/api/user', userRoutes); //Register the route here using the userRoutes object,points to / in frontend
