@@ -57,4 +57,30 @@ userSchema.statics.signup = async function (email, password) {
 
   return user;
 };
+
+userSchema.statics.login = async function (email, password) {
+  //Perform empty fields check
+  if (!email || !password) {
+    throw Error('Please fill in all fields.');
+  }
+
+  //check if email already exists/correct
+
+  //User collection is exported only at the last line of this file and hence it is not available. So we use the this keyword
+  //Also note that we are using the regular function type declaration using function keyword for this operator to work. If we used an arrow fucntion this won't work
+
+  const user = await this.findOne({ email }); //async code awaiting db action
+  if (!user) {
+    throw Error('Incorrect Email.'); //can't send res.status now so just throw an error now as User isnt available yet
+  }
+  //match returns a boolean value if entered and hashed password in db are the same
+  const match = await bcrypt.compare(password, user.password);
+
+  if (!match) {
+    throw Error('Incorrect Password.');
+    //check if password matches and return error
+  }
+  return user;
+};
+
 export default mongoose.model('User', userSchema); //Export the model as a mongoose schema for use in the usercontroller.js
