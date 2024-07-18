@@ -83,4 +83,11 @@ userSchema.statics.login = async function (email, password) {
   return user;
 };
 
-export default mongoose.model('User', userSchema); //Export the model as a mongoose schema for use in the usercontroller.js
+// var User = mongoose.model('User', userSchema); //Export the model as a mongoose schema for use in the usercontroller.js
+// export default { User };
+
+const User = mongoose.model('User', userSchema);
+
+export default User;
+
+// module.exports = mongoose.model('User', userSchema);
