@@ -1,0 +1,65 @@
+.card {
+  border: 1px solid lightgray;
+  border-radius: 14px;
+  margin: 40px auto;
+  width: 640px;
+  padding: 10px;
+}
+.food {
+  width: 100%;
+  border-radius: 14px;
+}
+
+.card-header {
+  position: relative;
+}
+.promoted {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: bisque;
+}
+
+.off {
+  position: absolute;
+  bottom: 40px;
+  left: 10px;
+  background-color: blueviolet;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.time {
+  position: absolute;
+  bottom: 40px;
+  right: 10px;
+  background-color: white;
+  color: gray;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 5px;
+}
+
+.safety-txt {
+  margin-left: 175px;
+  /* margin-top: 60px; */
+  position: absolute;
+  top: 75px;
+  margin-top: 0px;
+  color: rgb(95, 93, 93);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: semi-bold;
+  font-size: 18px;
+}
+.card-footer {
+  position: relative;
+}
+.safety {
+  margin-top: 60px;
+}
+
+.type {
+  font-weight: bolder;
+  color: lightslategray;
+}
