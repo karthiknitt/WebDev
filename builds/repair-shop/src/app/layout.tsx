@@ -15,8 +15,12 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Repair Shop",
+  title: {
+    template: "%s | Computer Repair Shop",
+    default: "Computer Repair Shop",
+  },
   description: "Karthik's Repair Shop",
+  applicationName: "Repair Shop",
 };
 
 export default function RootLayout({
