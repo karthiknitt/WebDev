@@ -1,0 +1,17 @@
+#add-item-form {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.item:hover {
+  cursor: pointer;
+  color: red;
+}
+
+.item {
+  list-style: none;
+  padding: 2px;
+  color: blue;
+}
